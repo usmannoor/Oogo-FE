@@ -1,0 +1,12 @@
+<div class="card m-5">
+  <app-header></app-header>
+
+  <div class="card-body">
+    <app-car-search (carSelect)="onCarSelected($event)"></app-car-search>
+    <p *ngIf="searchResult">Selected car is: {{ searchResult }}</p>
+  </div>
+
+</div>
+
+<app-loader *ngIf="isLoading">{{ isLoading }}</app-loader>
+
